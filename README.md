@@ -2,7 +2,7 @@
 此網站使用node.js環境 + Express框架建立而成，可供用戶搜尋網站上的店家或瀏覽店家詳細資料。
 
 ## 網站截圖
-![網站截圖](https://github.com/surferintaiwan/Semester3-A1-restaurant-list/blob/master/index%20photo.png)
+![網站截圖](https://github.com/surferintaiwan/Semester3-A1-restaurant-list/blob/master/index-photo.png?raw=true)
 
 ## 功能說明
 1. 瀏覽所有店家
