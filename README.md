@@ -1,6 +1,8 @@
 # express-handlebars布局及樣式練習-以餐廳網站為例
 此網站使用node.js環境 + Express框架建立而成，可供用戶搜尋網站上的店家或瀏覽店家詳細資料。
 
+## 網站截圖
+![網站截圖](https://github.com/surferintaiwan/Semester3-A1-restaurant-list/blob/master/index%20photo.png)
 
 ## 功能說明
 1. 瀏覽所有店家
@@ -47,9 +49,12 @@ nodemon app.js
 ### 套件
 * nodemon
 * express-handlebars
-* query > 3.4.1
+* jquery > 3.4.1
 * bootstrap > 5.11.2
 * popper
+
+## 專案貢獻者
+[Shawn](https://github.com/surferintaiwan)
 
 
 
