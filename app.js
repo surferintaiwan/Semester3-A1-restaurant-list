@@ -41,17 +41,36 @@ app.get('/restaurants/:id', (req, res) => {
 app.get('/search', (req, res) => {
     const cssStyle = 'index'
     let searchRestaurant = allRestaurantData.results.filter((restaurant) => {
-        return restaurant.name.toLowerCase().includes(req.query.keyword.toLowerCase())
+        if (restaurant.name.toLowerCase().includes(req.query.keyword.toLowerCase()) || restaurant.category.toLowerCase().includes(req.query.keyword.toLowerCase()))
+        return true 
     })
-    console.log(req.query.keyword)
     res.render('index', {
         restaurant: searchRestaurant,
         css: 'index.css',
         value: req.query.keyword
     })
+    
+    // 這邊想將.card-columns印出來，但顯示document is not defined
+    // let cardColumns = window.document.querySelector('.card-columns')
+    // console.log(cardColumns)
 })
 
 // listen and launch server
 app.listen(port,() => {
     console.log(`nodemon is listening http://localhost/${port}`)
 })
+
+// 上網查到jsdom這個module，但不知道怎麼引入我的html
+/*
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
+const dom = new JSDOM(``, {
+    url: "http://localhost:3000/",
+    referrer: "https://example.com/",
+    contentType: "text/html",
+    includeNodeLocations: true,
+    storageQuota: 10000000
+  });
+console.log()
+*/
